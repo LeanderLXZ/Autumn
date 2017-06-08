@@ -1,1 +1,116 @@
-abc
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Our Website</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">* 2016—10-30;</span><br />
+			<span class="space"/><span class="comments">* 2017-02-07;</span><br />
+            <span class="space"/><span class="comments">* 鲁学长送给宝宝的Love_Code;</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+
+			Boy  = new Boy(<span class="keyword">"Lβ2"</span>);<br />
+            Girl u = new Girl(<span class="keyword">"Lα1"</span>);<br /><br/>
+
+            while(i != find_u){<br />
+            <span class="placeholder"/>i.foreach(u,in,theWorld)}<br />
+            <span class="placeholder"/><span class="comments">// 我遍历了整个世界,终于找到了你</span><br />
+
+            int day;<br />
+			<span class="comments">// 和你在一起后的每一天，我都是如此幸福</span><br />
+
+            u.luck += i.luck - 2; i.luck = 2;<br />
+			<span class="comments">// 我愿将一生所有的幸运都给你，只留两次给自己</span><br />
+			i.luck --; i.meet(u);<br />
+			<span class="comments">// 一次，是和你相遇</span><br />
+            i.luck --; i.beWith(u);<br />
+			<span class="comments">// 另一次，是能和你在一起</span><br />
+
+            if(u.hand == cold){<br />
+            <span class="placeholder"/>i.hold(u.hand);<br />
+            <span class="placeholder"/><span class="comments">// 我将紧紧握住你的手</span><br />
+            <span class="placeholder"/>i.give(i.hand.temp,u.hand.temp);<br />
+            <span class="placeholder"/><span class="comments">// 将温度全部给予你</span><br />
+            <span class="placeholder"/>return u.happyFace;}<br />
+            <span class="placeholder"/><span class="comments">// 以换取你幸福的脸庞</span><br />
+
+            for (day = 0;day <= forever;day ++) {<br />
+            <span class="placeholder"/>i.love(u);}<br />
+            <span class="placeholder"/><span class="comments">// 爱你直到永远，我的宝宝!</span><br />
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					宝宝，从我们相爱并在一起已经度过了:<br/><br/>
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永远!<br/>
+					<div class="signature">-- 鲁学长</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 10, 30);
+together.setHours(17);
+together.setMinutes(43);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "浏览器不支持噢~<br/>推荐使用以下浏览器: Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div id="ps" style="text-align:center;clear:both">
+	<span>网站仍在建设中噢~</span><br/><br/>
+    <a href="OurWebsite/index2.html" target="_blank">往期回顾</a>
+</div>
+</body>
+</html>

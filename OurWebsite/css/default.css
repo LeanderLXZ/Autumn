@@ -1,0 +1,16 @@
+﻿html, body {
+  margin: 0;
+  padding: 0;
+  background: #faf8ef;
+  color: #776e65;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; }
+body {margin: 30px 15px; }
+#mainDiv{width:100%;height:100%}
+#content{width:100%;height:100%}
+#clickSound{display:none}
+#code{font-family:"sans-serif";width:100%;font-size:18px;color:#666}
+#code .string{color:#2a36ff}
+#code .keyword{color:#7f0055;font-weight:bold}
+#code .placeholder{margin-left:15px}#code .space{margin-left:7px}
+#code .comments{color:#3f7f5f}
